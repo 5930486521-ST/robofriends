@@ -1,7 +1,7 @@
 {
-  "main.css": "/robofriends-udemy/static/css/main.8e343e73.chunk.css",
-  "main.js": "/robofriends-udemy/static/js/main.bf5d07ba.chunk.js",
-  "main.js.map": "/robofriends-udemy/static/js/main.bf5d07ba.chunk.js.map",
+  "main.css": "/robofriends-udemy/static/css/main.98d29039.chunk.css",
+  "main.js": "/robofriends-udemy/static/js/main.b3a5827f.chunk.js",
+  "main.js.map": "/robofriends-udemy/static/js/main.b3a5827f.chunk.js.map",
   "static/css/1.b2594f04.chunk.css": "/robofriends-udemy/static/css/1.b2594f04.chunk.css",
   "static/js/1.0b334eb8.chunk.js": "/robofriends-udemy/static/js/1.0b334eb8.chunk.js",
   "static/js/1.0b334eb8.chunk.js.map": "/robofriends-udemy/static/js/1.0b334eb8.chunk.js.map",
@@ -9,8 +9,8 @@
   "runtime~main.js.map": "/robofriends-udemy/static/js/runtime~main.d006e06c.js.map",
   "static/css/1.b2594f04.chunk.css.map": "/robofriends-udemy/static/css/1.b2594f04.chunk.css.map",
   "static/media/App.css": "/robofriends-udemy/static/media/SEGA.12a3db8b.woff",
-  "static/css/main.8e343e73.chunk.css.map": "/robofriends-udemy/static/css/main.8e343e73.chunk.css.map",
+  "static/css/main.98d29039.chunk.css.map": "/robofriends-udemy/static/css/main.98d29039.chunk.css.map",
   "index.html": "/robofriends-udemy/index.html",
-  "precache-manifest.57f77f76c5086c07fb42cc2856435169.js": "/robofriends-udemy/precache-manifest.57f77f76c5086c07fb42cc2856435169.js",
+  "precache-manifest.cfbedaf4875cadb39322cdbb9277998d.js": "/robofriends-udemy/precache-manifest.cfbedaf4875cadb39322cdbb9277998d.js",
   "service-worker.js": "/robofriends-udemy/service-worker.js"
 }
