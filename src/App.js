@@ -1,28 +1,44 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component} from "react";  
+import CardList from "./component/CardList";
+import {SearchBox} from "./component/SearchBox";
+import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import {onsearchChangeAction,getListAction} from "./statemanagement/Actions"
+import {connect} from "react-redux"
+
+// (connect from the state from store)
+//tell provider the name that we want for the props using obj(map) 
+const mapStateToProps = (state) => {
+    return{
+    searchField : state.onSeachChangeReducer.searchField,
+    list : state.getListReducer.list,
+    isPending : state.getListReducer.isPending
+}}
+
+//define the function that app.js is going to use and how it relate to Action
+//then tell provider the name that we want for the props using obj(map)
+const mapDispatchToPros = (dispatch) =>{
+    return {
+            //onsearchChange is the function that recieve event
+    onsearchChange : (event) => dispatch(onsearchChangeAction(event.target.value)) , // related by the event value will use to set the action state
+    getList : () => dispatch(getListAction())
+}}
+
+class App extends Component{
+
+    componentDidMount() {
+        this.props.getList();
+    }
+
+    render(){
+        console.log(this.props.list);
+        var searchByNameList = this.props.list.filter((robot) => (robot.name.toLowerCase()).includes(this.props.searchField.toLowerCase()));
+        return (<div className = "tc">
+            <h1 className = "f1">RoboFriends</h1>
+            <SearchBox handler = {this.props.onsearchChange}></SearchBox>
+            <CardList list={searchByNameList}></CardList>
+            </div>);         
+    }
 }
-
-export default App;
+        
+export default connect(mapStateToProps,mapDispatchToPros)(App);  
