@@ -22,5 +22,5 @@ ReactDOM.render(<Provider store = {reduxStore}>
                     <App/>
                 </Provider>, document.getElementById('root'));  
 
-
-serviceWorker.unregister();
+// For PWA, it's required the service worker to be a proxy while sending a request
+serviceWorker.register();
