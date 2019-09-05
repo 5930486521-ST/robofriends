@@ -1,15 +1,17 @@
+import { ThunkDispatch } from 'redux-thunk'
+
 export const SEARCHFIELD_CHANGED = "SEARCHFIELD_CHANGED";
 export const GET_LIST_PENDING = "GET_LIST_PENDING";
 export const GET_LIST_SUCCESSED = "GET_LIST_SUCCESSED";
 export const GET_LIST_FAILED = "GET_LIST_FAILED";
 
-export const onsearchChangeAction = (text)=>{
+export const onsearchChangeAction = (text: string)=>{
     var actionState = {type :SEARCHFIELD_CHANGED,  //typeOfState
                          searchField : text};
     return actionState;
 }
 
-export const getListAction = () => (dispatch) =>{
+export const getListAction = () => (dispatch: ThunkDispatch<{},{},any>) =>{
     dispatch({type:GET_LIST_PENDING});
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())

@@ -1,6 +1,7 @@
 import React from "react";
+import { Robot } from '../App'
 
-const Card = ({id, name, username, email}) => {
+const Card = ({id, name, username, email}: Robot) => {
     return (<div className='tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5'>
         <img src={"https://robohash.org/"+ id} alt = "not found"></img>
         <div>
